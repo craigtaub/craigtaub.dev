@@ -628,3 +628,11 @@ pre tt:after {
     font-size: 100%;
   }
 }
+.header-links {
+  padding-top: 10px;
+  color: white;
+}
+.header-links a {
+  color: white;
+  text-decoration: none;
+}

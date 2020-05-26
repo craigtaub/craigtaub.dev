@@ -16,7 +16,13 @@ const Header = ({ siteTitle }) => (
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <h1
+        style={{
+          margin: 0,
+          fontFamily: "Comfortaa, cursive",
+          fontSize: "43.2px",
+        }}
+      >
         <Link
           to="/"
           style={{
@@ -27,6 +33,15 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <section class="header-links">
+        <a target="_blank" href="https://twitter.com/craigtaub">
+          Twitter
+        </a>
+        &nbsp;|&nbsp;
+        <a target="_blank" href="https://github.com/craigtaub">
+          GitHub
+        </a>
+      </section>
     </div>
   </header>
 )
