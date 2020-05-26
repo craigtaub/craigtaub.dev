@@ -385,6 +385,7 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+  /* font-size: 21px; - TODO dev.to*/
 }
 figure {
   margin-left: 0;
@@ -442,6 +443,12 @@ blockquote {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+
+  border-left: calc(0.2vw + 2px) solid #333;
+  padding: 0.1% 6% 0.1% 4%;
+  margin: 1.6em 1vw;
+  font-size: 0.92em;
+  line-height: 1.4em;
 }
 form {
   margin-left: 0;
@@ -527,8 +534,9 @@ li > ul {
   margin-bottom: calc(1.45rem / 2);
   margin-top: calc(1.45rem / 2);
 }
-blockquote *:last-child {
-  margin-bottom: 0;
+blockquote p {
+  padding: 0;
+  margin: 0.95em 0 0.95em;
 }
 li *:last-child {
   margin-bottom: 0;
