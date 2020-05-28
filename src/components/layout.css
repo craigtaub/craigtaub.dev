@@ -649,3 +649,7 @@ pre tt:after {
   color: white;
   text-decoration: none;
 }
+
+:not(pre) > code[class*="language-"] {
+  white-space: break-spaces;
+}
