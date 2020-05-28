@@ -1,5 +1,5 @@
 ---
-path: "/source-maps–from-top-to-bottom"
+path: "/source-maps-from-top-to-bottom"
 date: "2020-04-29"
 title: "Source maps from top to bottom"
 ---
@@ -834,7 +834,7 @@ SUCCESS !! 💪
 So what are the limitations of building a compiler like this?
 
 - Not all JavaScript statements are covered (only what our file needed)
-- Current it only works with 1 file. Web bundlers will follow the app building a dependency graph and applying transformations on those files (see my [“under-the-hood of web bundlers”](https://itnext.io/under-the-hood-of-web-bundlers-e-g-webpack-926e868f7f5e) article for more on this).
+- Current it only works with 1 file. Web bundlers will follow the app building a dependency graph and applying transformations on those files (see my [“under-the-hood of web bundlers”](https://craigtaub.dev/under-the-hood-of-web-bundlers) article for more on this).
 - Output file vs bundle. Web bundlers will produce bundles with code runnable in specific JavaScript environments, ours was very limited (again see my “under-the-hood of web bundlers” for more).
 - Basic transform. Performing additional optimisations would not really be easy to do without a lot of new code.
 

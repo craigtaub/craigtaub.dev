@@ -6,7 +6,7 @@ title: "Under-the-hood of type systems (e.g. TypeScript)"
 
 I struggled to find an explanation from a low-level view of exactly how a **"JavaScript type system compiler"** is implemented. I understood many of the jobs of a type system but was unsure of the mechanisms involved and how they worked together.
 
-This article looks to shine a light on some of the fundamentals at work under-the-hood. It is not possible to focus on everything in 1 article so here we will be looking at **"type checks"** specifically. Starting with an overview of type systems then building our own compiler which can run type checks and output sensible messages. For more help on transforms please see my article or talks on [Web Bundlers](https://itnext.io/under-the-hood-of-web-bundlers-e-g-webpack-926e868f7f5e) or [Source Maps](https://itnext.io/source-maps-from-top-to-bottom-597bbc07436).
+This article looks to shine a light on some of the fundamentals at work under-the-hood. It is not possible to focus on everything in 1 article so here we will be looking at **"type checks"** specifically. Starting with an overview of type systems then building our own compiler which can run type checks and output sensible messages. For more help on transforms please see my article or talks on [Web Bundlers](https://craigtaub.dev/under-the-hood-of-web-bundlers) or [Source Maps](https://craigtaub.dev/source-map-from-top-to-bottom).
 
 This is part of my "under-the-hood of" series:
 
@@ -114,7 +114,7 @@ For a type system to work in a development environment it is best if it can run 
 
 Many type systems contain code which is not supported in native Javascript (e.g. type annotations are not supported) so they must transform from unsupported JavaScript to supported JavaScript.
 
-As mentioned at the very top we will be focusing on point **(1) Performing type checks**. If it seems valuable we could explore (2) language servers in the future. My articles on [Web Bundlers](https://itnext.io/under-the-hood-of-web-bundlers-e-g-webpack-926e868f7f5e) and [Source Maps](https://itnext.io/source-maps-from-top-to-bottom-597bbc07436) go into more detail about (3) transforming code.
+As mentioned at the very top we will be focusing on point **(1) Performing type checks**. If it seems valuable we could explore (2) language servers in the future. My articles on [Web Bundlers](https://craigtaub.dev/under-the-hood-of-web-bundlers) and [Source Maps](https://craigtaub.dev/source-maps-from-top-to-bottom) go into more detail about (3) transforming code.
 
 ---
 
