@@ -18,10 +18,6 @@ const IndexPage = ({
     <Layout>
       <SEO title="Home" />
       <h1>Welcome 😃</h1>
-      <p>Hello and welcome to my blog.</p>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <img src="https://media.giphy.com/media/OkJat1YNdoD3W/giphy.gif" />
-      </div>
       <div>{Posts}</div>
     </Layout>
   )
