@@ -61,7 +61,7 @@ dfn {
   font-style: italic;
 }
 h1 {
-  font-size: 2em;
+  /* font-size: 2em; */
   margin: 0.67em 0;
 }
 mark {
@@ -628,9 +628,22 @@ pre tt:after {
     font-size: 100%;
   }
 }
+@media only screen and (max-width: 600px) {
+  .header-text {
+    text-align: center;
+  }
+}
+.header-text {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 1.45rem 1.0875rem;
+  display: flex;
+  flex-wrap: wrap;
+}
 .header-links {
   padding-top: 10px;
   color: white;
+  flex: 1;
 }
 .header-links a {
   color: white;
