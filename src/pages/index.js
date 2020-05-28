@@ -2,7 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 import PostLink from "../components/post-link"
 
@@ -21,7 +20,7 @@ const IndexPage = ({
       <h1>Welcome 😃</h1>
       <p>Hello and welcome to my blog.</p>
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Image />
+        <img src="https://media.giphy.com/media/OkJat1YNdoD3W/giphy.gif" />
       </div>
       <div>{Posts}</div>
     </Layout>
