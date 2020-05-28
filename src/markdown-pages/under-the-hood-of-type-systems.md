@@ -8,6 +8,13 @@ I struggled to find an explanation from a low-level view of exactly how a **"Jav
 
 This article looks to shine a light on some of the fundamentals at work under-the-hood. It is not possible to focus on everything in 1 article so here we will be looking at **"type checks"** specifically. Starting with an overview of type systems then building our own compiler which can run type checks and output sensible messages. For more help on transforms please see my article or talks on [Web Bundlers](https://itnext.io/under-the-hood-of-web-bundlers-e-g-webpack-926e868f7f5e) or [Source Maps](https://itnext.io/source-maps-from-top-to-bottom-597bbc07436).
 
+This is part of my "under-the-hood of" series:
+
+- [Source maps](https://craigtaub.dev/source-maps-from-top-to-bottom)
+- [React hooks](https://craigtaub.dev/under-the-hood-of-react-hooks)
+- [Web bundlers (e.g. Webpack)](https://craigtaub.dev/under-the-hood-of-web-bundlers)
+- [Apollo](https://itnext.io/under-the-hood-of-apollo-6d8642066b28)
+
 A video for this talk can be found [here](https://www.youtube.com/watch?v=QnQnv6uZNek). Part of my "under-the-hood of" series [here](https://www.youtube.com/channel/UCYi23MnKBKn0yLZKBrz5Bfw).
 
 NOTE: Apologies as there is some repetition in this article with my previous article on [Source Maps](https://itnext.io/source-maps-from-top-to-bottom-597bbc07436). But it is important to include all of the necessary information to understand the mechanisms we will be looking at today.

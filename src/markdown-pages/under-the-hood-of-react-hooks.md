@@ -6,7 +6,16 @@ title: "Under-the-hood of React Hooks"
 
 React is filled with interesting design patterns, when Hooks were introduced it cleaned up many of the issues people had with the more arguably frustrating features such as classes and lifecycle methods. Today we will have a look at building our own React engine with Hooks, so we can understand the mechanisms at work for _useState_ and _useEffect_.
 
-We will **not** be covering Fibre, _reconciliation_ or the change detection mechanisms. Video for this post can be found [here](https://www.youtube.com/watch?v=mMTYRijTHEo). Video for this post can be found here. A part of my ["under-the-hood of"](https://www.youtube.com/channel/UCYi23MnKBKn0yLZKBrz5Bfw) video series.
+We will **not** be covering Fibre, _reconciliation_ or the change detection mechanisms.
+
+This is part of my "under-the-hood of" series:
+
+- [Source maps](https://craigtaub.dev/source-maps-from-top-to-bottom)
+- [Web bundlers (e.g. Webpack)](https://craigtaub.dev/under-the-hood-of-web-bundlers)
+- [Apollo](https://itnext.io/under-the-hood-of-apollo-6d8642066b28)
+- [Type systems (e.g. TypeScript)](https://craigtaub.dev/under-the-hood-of-type-systems)
+
+A video for this post can be found [here](https://www.youtube.com/watch?v=mMTYRijTHEo). A part of my ["under-the-hood of"](https://www.youtube.com/channel/UCYi23MnKBKn0yLZKBrz5Bfw) video series.
 
 ---
 
