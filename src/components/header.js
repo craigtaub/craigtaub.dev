@@ -9,7 +9,7 @@ const Header = ({ siteTitle }) => (
       marginBottom: `1.45rem`,
     }}
   >
-    <div class="header-text">
+    <div className="header-text">
       <h1
         style={{
           margin: 0,
@@ -29,7 +29,7 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
-      <section class="header-links">
+      <section className="header-links">
         <a target="_blank" href="https://medium.com/@tabu_craig">
           Medium
         </a>
