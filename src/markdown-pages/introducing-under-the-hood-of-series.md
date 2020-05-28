@@ -18,7 +18,7 @@ I am producing a blog and video series taking an indepth look at the mechanisms 
 
 - Test runners
 - GraphQL
-- Go a suggestion? Email me on `craigtaub@gmail.com`
+- Go a suggestion? Email me at `craigtaub@gmail.com`
 
 # Prefer watching a walk-through?
 
