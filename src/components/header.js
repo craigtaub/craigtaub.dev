@@ -30,6 +30,8 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1>
       <section className="header-links">
+        <Link to="/about">About</Link>
+        &nbsp;|&nbsp;
         <a
           target="_blank"
           rel="noopener noreferrer"
