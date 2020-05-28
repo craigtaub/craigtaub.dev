@@ -73,6 +73,23 @@ function SEO({ description, lang, meta, title }) {
         href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600,700"
         rel="stylesheet"
       ></link>
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/favicon_io/apple-touch-icon.png"
+      ></link>
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon_io/favicon-32x32.png"
+      ></link>
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/favicon_io/favicon-16x16.png"
+      ></link>
     </Helmet>
   )
 }
