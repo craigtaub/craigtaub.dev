@@ -5,9 +5,13 @@ const PostLink = ({ post }) => (
     <h2
       style={{
         fontFamily: "Comfortaa, cursive",
+        color: "rebeccapurple",
       }}
     >
-      <Link to={post.frontmatter.path} style={{ textDecoration: "none" }}>
+      <Link
+        to={post.frontmatter.path}
+        style={{ textDecoration: "none", color: "rebeccapurple" }}
+      >
         {" "}
         {post.frontmatter.title}
         <br />

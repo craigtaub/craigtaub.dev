@@ -17,7 +17,7 @@ const IndexPage = ({
   return (
     <Layout>
       <SEO title="Home" />
-      <h1>Welcome 😃</h1>
+      <h1 style={{ color: "rebeccapurple" }}>Welcome 😃</h1>
       <div>{Posts}</div>
     </Layout>
   )

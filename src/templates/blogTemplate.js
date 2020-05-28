@@ -15,6 +15,7 @@ export default function Template({
           <h1
             style={{
               fontFamily: "Comfortaa, cursive",
+              color: "rebeccapurple",
             }}
           >
             {frontmatter.title}
@@ -22,6 +23,7 @@ export default function Template({
           <h2
             style={{
               fontFamily: "Comfortaa, cursive",
+              color: "rebeccapurple",
             }}
           >
             {frontmatter.date}
