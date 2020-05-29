@@ -16,7 +16,10 @@ const IndexPage = ({
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO
+        title="Home"
+        description="Welcome to craigtaub.dev, my personal blog about mostly JavaScript."
+      />
       <h1 style={{ color: "rebeccapurple" }}>Welcome to my blog 😃</h1>
       <div>{Posts}</div>
     </Layout>
