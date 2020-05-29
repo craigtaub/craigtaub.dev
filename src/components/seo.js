@@ -6,8 +6,7 @@ function SEO({ description, lang, meta, title }) {
   const site = {
     siteMetadata: {
       author: "craigtaub",
-      description:
-        "Welcome to craigtaub.dev, my personal blog about mostly JavaScript.",
+      description: "My personal blog about mostly JavaScript.",
       title: "craigtaub.dev",
     },
   }

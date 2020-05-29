@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `craigtaub.dev`,
     siteUrl: `https://craigtaub.dev`,
-    description: `Welcome to craigtaub.dev, my personal blog about mostly JavaScript and NodeJS`,
+    description: `My personal blog about mostly JavaScript and NodeJS`,
     author: `craigtaub`,
   },
   plugins: [
