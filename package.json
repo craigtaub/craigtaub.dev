@@ -24,6 +24,7 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "gatsby-plugin-sitemap": "^2.4.3",
     "prettier": "^1.19.1"
   },
   "keywords": [
@@ -31,10 +32,11 @@
   ],
   "license": "MIT",
   "scripts": {
+    "start": "npm run develop", 
+    "start-production-mode": "gatsby build && gatsby serve",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"

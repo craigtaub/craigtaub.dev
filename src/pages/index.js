@@ -18,7 +18,7 @@ const IndexPage = ({
     <Layout>
       <SEO
         title="Home"
-        description="Welcome to craigtaub.dev, my personal blog about mostly JavaScript."
+        description="Welcome to craigtaub.dev, my personal blog about mostly JavaScript and NodeJS."
       />
       <div>{Posts}</div>
     </Layout>

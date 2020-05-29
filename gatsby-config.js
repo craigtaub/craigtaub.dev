@@ -1,10 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `craigtaub.dev`,
+    siteUrl: `https://craigtaub.dev`,
+    description: `Welcome to craigtaub.dev, my personal blog about mostly JavaScript and NodeJS`,
+    author: `craigtaub`,
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
