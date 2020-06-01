@@ -668,3 +668,6 @@ tt:before,
 tt:after {
   content: "";
 }
+.language-javascript {
+  margin-bottom: 1em !important;
+}
