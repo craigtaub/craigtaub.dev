@@ -651,5 +651,20 @@ pre tt:after {
 }
 
 :not(pre) > code[class*="language-"] {
-  white-space: break-spaces;
+  /* from dev.to */
+  margin: auto;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0.2em 0.2em 0.2em 0.2em;
+  border-radius: 2px;
+  font-size: 0.84em;
+  vertical-align: 0;
+  max-width: 100%;
+  line-height: 1.6em;
+  color: black;
+}
+code:before,
+code:after,
+tt:before,
+tt:after {
+  content: "";
 }
