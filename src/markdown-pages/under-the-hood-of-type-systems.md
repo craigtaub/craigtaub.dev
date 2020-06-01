@@ -672,6 +672,6 @@ As mentioned there are many additional parts to a type compiler which we have om
 
 ---
 
-Thanks so much for reading or watching, I learnt a huge amount about type systems from this research and I hope it was useful for you. You can find the repository for all this code [here](https://github.com/craigtaub/our-own-type-system). Please spare a heart if you enjoyed this.
+Thanks so much for reading or watching, I learnt a huge amount about type systems from this research and I hope it was useful for you. You can find the repository for all this code [here](https://github.com/craigtaub/our-own-type-system).
 
 Thanks, Craig 😃
