@@ -10,8 +10,9 @@ const IndexPage = ({
     allMarkdownRemark: { edges },
   },
 }) => {
+  // if no "date" DO NOT render article
   const Posts = edges
-    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
+    .filter(edge => !!edge.node.frontmatter.date)
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
 
   return (

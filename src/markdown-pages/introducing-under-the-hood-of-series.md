@@ -8,16 +8,17 @@ I am producing a blog and video series taking an indepth look at the mechanisms 
 
 ## Topics covered so far
 
-- [Source maps](https://craigtaub.dev/source-maps-from-top-to-bottom)
-- [React hooks](https://craigtaub.dev/under-the-hood-of-react-hooks)
-- [Web bundlers (e.g. Webpack)](https://craigtaub.dev/under-the-hood-of-web-bundlers)
+- [Test runners (e.g. Mocha)](/under-the-hood-of-test-runners)
+- [Source maps](/source-maps-from-top-to-bottom)
+- [React hooks](/under-the-hood-of-react-hooks)
+- [Web bundlers (e.g. Webpack)](/under-the-hood-of-web-bundlers)
+- [Type systems (e.g. TypeScript)](/under-the-hood-of-type-systems)
 - [Apollo](https://itnext.io/under-the-hood-of-apollo-6d8642066b28)
-- [Type systems (e.g. TypeScript)](https://craigtaub.dev/under-the-hood-of-type-systems)
 
 ## Future topics
 
-- Test runners
-- GraphQL
+- GraphQL server
+- GraphQL client
 - Go a suggestion? Email me at **craigtaub@gmail.com**
 
 # Prefer watching a walk-through?
