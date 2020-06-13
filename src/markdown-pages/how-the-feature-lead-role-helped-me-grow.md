@@ -4,11 +4,11 @@ date: "2020-06-12"
 title: "How the Feature Lead role finally helped me grow"
 ---
 
-I have been a senior engineer for around 6 years. I definitely was not ready for it when I was hired by the BBC, but it pushed me to grow into the role and I eventually did.
+I have been a senior engineer for around 7 years. I definitely was not ready for it when I was hired by the BBC, but it pushed me to grow into the role and I eventually did.
 
 However the past 4 years or so I have really struggled to grow more. My knowledge has improved as the JS ecosystem around me was transformed from one built on jQuery to where we are now. But it has always been clear that this is not the same as genuine growth. By that I mean my role and impact in a given business, what I have to offer besides being told what code to write.
 
-I started working at Nested a year ago and came across this idea of Feature Lead. It is not a new concept (having seen it first mentioned in 2012, but it’s likely older than that) but was the first time I had worked somewhere that was interested in using it.
+I started working at Nested almost 2 years ago and came across this idea of Feature Lead. It is not a new concept (having seen it first mentioned in 2012, but it’s likely older than that) but was the first time I had worked somewhere that was interested in using it.
 
 At Nested we are impact-driven, by that I mean we aim for optimal ROI (return-on-investment). We try to quantifiably demonstrate that we are heading towards our goal by using KPIs (key performance indicators; low-level targets which help achieve a greater goal).
 
