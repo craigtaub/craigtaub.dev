@@ -34,7 +34,7 @@ Product teams consist of similar members but with a slight difference
 
 If the team contains many more members than this then the team begins reaching critical mass.
 
-Product teams are given a business problem to solve, not a roadmap. These problems usually come from a "[Product Strategy](#the-product-stragegy)"
+Product teams are given a business problem to solve, not a roadmap. These problems usually come from a "[Product Strategy](#the-product-strategy-)"
 
 They are measured by their business results, so there is a lot of pressure to ensure their chosen features and projects help the customers and the business.
 
