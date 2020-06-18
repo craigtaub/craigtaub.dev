@@ -17,8 +17,9 @@ I am producing a blog and video series taking an indepth look at the mechanisms 
 
 ## Future topics
 
-- GraphQL server
-- GraphQL client
+- GraphQL
+- Linters (e.g Eslint)
+- Auto formatting (e.g. Prettier)
 - Go a suggestion? Email me at **craigtaub@gmail.com**
 
 # Prefer watching a walk-through?
