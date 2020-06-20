@@ -160,8 +160,10 @@ Lastly we run a small express server application which pulls the bundle name fro
 ![Our server](https://dev-to-uploads.s3.amazonaws.com/i/uha23l1f8rtqfmrzbg00.png)
 
 If we now run:
-_> npm run compile_
-_> npm run start_
+
+    > npm run compile
+    > npm run start
+
 Our application will run and we can see our bundle and its contents in the "network" tab.
 
 ![Network tab](https://dev-to-uploads.s3.amazonaws.com/i/mopneeu3cgsiiqz3fdb8.png)
