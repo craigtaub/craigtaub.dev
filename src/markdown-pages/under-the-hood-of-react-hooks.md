@@ -8,7 +8,7 @@ React is filled with interesting design patterns, when Hooks were introduced it 
 
 We will **not** be covering Fibre, _reconciliation_ or the change detection mechanisms.
 
-This is part of my "under-the-hood of" series:
+This is part of my ["under-the-hood of" series](/introducing-my-under-the-hood-of-series):
 
 - [Source maps](https://craigtaub.dev/source-maps-from-top-to-bottom)
 - [Web bundlers (e.g. Webpack)](https://craigtaub.dev/under-the-hood-of-web-bundlers)

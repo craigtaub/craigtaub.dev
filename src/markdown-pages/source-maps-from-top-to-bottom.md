@@ -8,7 +8,7 @@ title: "Source maps from top to bottom"
 
 Source Maps are something of a mystery to most people. They are found in most web-based compilation scenarios; from type system to web bundlers. But often the details of how they are actually built is not 100% transparent as their usage alone can be complex enough. Today we will start with a brief overview of what they are and how to use them. Then move onto walking through the lower-level mechanics; by building our own compiler which will generate some code and produce its own Source Map for browser consumption.
 
-This is part of my "under-the-hood of" series:
+This is part of my ["under-the-hood of" series](/introducing-my-under-the-hood-of-series):
 
 - [React hooks](https://craigtaub.dev/under-the-hood-of-react-hooks)
 - [Web bundlers (e.g. Webpack)](https://craigtaub.dev/under-the-hood-of-web-bundlers)

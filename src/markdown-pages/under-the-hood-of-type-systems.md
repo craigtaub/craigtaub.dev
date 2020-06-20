@@ -8,7 +8,7 @@ I struggled to find an explanation from a low-level view of exactly how a **"Jav
 
 This article looks to shine a light on some of the fundamentals at work under-the-hood. It is not possible to focus on everything in 1 article so here we will be looking at **"type checks"** specifically. Starting with an overview of type systems then building our own compiler which can run type checks and output sensible messages. For more help on transforms please see my article or talks on [Web Bundlers](https://craigtaub.dev/under-the-hood-of-web-bundlers) or [Source Maps](https://craigtaub.dev/source-map-from-top-to-bottom).
 
-This is part of my "under-the-hood of" series:
+This is part of my ["under-the-hood of" series](/introducing-my-under-the-hood-of-series):
 
 - [Source maps](https://craigtaub.dev/source-maps-from-top-to-bottom)
 - [React hooks](https://craigtaub.dev/under-the-hood-of-react-hooks)

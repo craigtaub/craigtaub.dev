@@ -6,7 +6,7 @@ title: "Under-the-hood of test runners (e.g Mocha)"
 
 Test runners are a very important part to the modern JavaScript application. Without which we could not be able to run any tests at all. They are fairly straight forward to understand in terms of what they do, they run your tests and print output. However something which is not as straight forward is how they work and the mechanisms they utilise to enable the command-line interface that we are all so familiar with.
 
-A video for this post can be found [here](https://www.youtube.com/watch?v=XefD5zuLAkU). This is part of my "under-the-hood of" series:
+A video for this post can be found [here](https://www.youtube.com/watch?v=XefD5zuLAkU). This is part of my ["under-the-hood of" series](/introducing-my-under-the-hood-of-series):
 
 - [Source maps](https://craigtaub.dev/source-maps-from-top-to-bottom)
 - [React hooks](https://craigtaub.dev/under-the-hood-of-react-hooks)
