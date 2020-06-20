@@ -12,12 +12,13 @@ There will be 3 parts to this article:
 2. Building a compiler for a "web bundler"
 3. Using the output with an application
 
-This is part of my "under-the-hood of" series:
+This is part of my ["under-the-hood of" series](/introducing-my-under-the-hood-of-series):
 
-- [Source maps](https://craigtaub.dev/source-maps-from-top-to-bottom)
-- [React hooks](https://craigtaub.dev/under-the-hood-of-react-hooks)
+- [Test runners (e.g. Mocha)](/under-the-hood-of-test-runners)
+- [Source maps](/source-maps-from-top-to-bottom)
+- [React hooks](/under-the-hood-of-react-hooks)
 - [Apollo](https://itnext.io/under-the-hood-of-apollo-6d8642066b28)
-- [Type systems (e.g. TypeScript)](https://craigtaub.dev/under-the-hood-of-type-systems)
+- [Type systems (e.g. TypeScript)](/under-the-hood-of-type-systems)
 
 A full video walkthrough for this post can be found [here](https://www.youtube.com/watch?v=JAY10_75vFw). A part of my ["under-the-hood of"](https://www.youtube.com/channel/UCYi23MnKBKn0yLZKBrz5Bfw) video series.
 
