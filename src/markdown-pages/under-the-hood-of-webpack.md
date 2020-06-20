@@ -142,7 +142,7 @@ The left hand side is our runtime, the right hand side shows all the "modules" w
 
 #### What is going on?
 
-The runtime template IIFE runs immediately handing the modules array as an argument. We define a cache (_installedModules_) and our import function (_*our_require*_). Its job is to execute the module runtime and return the exports for a given module id (the ID correlates to its location in the modules array). The exports are set on the parent module, utilising pass-by-ref, and the module is then stored in cache for easier re-use.. Finally we execute the import function for our entry point which will start the application as it does not require calling an export itself. All imports inside our modules will now utilise our custom method.
+The runtime template IIFE runs immediately handing the modules array as an argument. We define a cache (_installedModules_) and our import function (_our_require_). Its job is to execute the module runtime and return the exports for a given module id (the ID correlates to its location in the modules array). The exports are set on the parent module, utilising pass-by-ref, and the module is then stored in cache for easier re-use.. Finally we execute the import function for our entry point which will start the application as it does not require calling an export itself. All imports inside our modules will now utilise our custom method.
 
 ---
 
