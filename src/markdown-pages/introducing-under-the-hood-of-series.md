@@ -8,11 +8,12 @@ I am producing a blog and video series taking an indepth look at the mechanisms 
 
 ## Topics covered so far
 
-- [Test runners (e.g. Mocha)](/under-the-hood-of-test-runners)
-- [Source maps](/source-maps-from-top-to-bottom)
-- [React hooks](/under-the-hood-of-react-hooks)
 - [Web bundlers (e.g. Webpack)](/under-the-hood-of-web-bundlers)
 - [Type systems (e.g. TypeScript)](/under-the-hood-of-type-systems)
+- [Test runners (e.g. Mocha)](/under-the-hood-of-test-runners)
+- [VSCode auto formatters (e.g. Prettier)](/under-the-hood-of-vscode-auto-formatters)
+- [Source maps](/source-maps-from-top-to-bottom)
+- [React hooks](/under-the-hood-of-react-hooks)
 - [Apollo](https://itnext.io/under-the-hood-of-apollo-6d8642066b28)
 
 ## Future topics
