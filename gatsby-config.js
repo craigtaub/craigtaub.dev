@@ -6,6 +6,7 @@ module.exports = {
     author: `craigtaub`,
   },
   plugins: [
+    `gatsby-plugin-feed`,
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-google-analytics`,
