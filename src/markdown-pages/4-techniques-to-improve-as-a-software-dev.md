@@ -12,7 +12,7 @@ Today we will be looking at 4 techniques that I have utilised to help me improve
 
 1. [Experience more patterns and interesting solutions](#1-experience-more-patterns-and-interesting-solutions)
 2. [Improve your general problem solving](#2-improve-your-general-problem-solving)
-3. [Identify and learn from your current input gaps](#3-identify-and-learn-from-your-current-input-gaps)
+3. [Identify and learn from your current behaviour](#3-identify-and-learn-from-your-current-behaviour)
 4. [Utilise common management principles](#4-utilise-common-management-principles)
 
 ---
