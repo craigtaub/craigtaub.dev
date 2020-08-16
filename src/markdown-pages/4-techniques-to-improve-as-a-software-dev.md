@@ -33,7 +33,7 @@ If you are somebody who has sometimes struggled to identify optimal solutions to
 
 To start with a problem is identified (e.g. "should our onboarding form have a back button")
 
-1. Review the problem from as many key perspectices, for example:
+1. Review the problem from as many key perspectives, for example:
     - The happy path
     - All possible error states
     - Mobile/tablet/desktop
@@ -103,5 +103,5 @@ I have spent the past couple years using these techniques and I have really foun
 
 The result of this is that I am much happier with my behaviour and overall impact within my team but also my company.
 
-If you have any ideas for other techiques I would love to hear them, please email or tweet me. 
+If you have any ideas for other techniques I would love to hear them, please email or tweet me. 
 Thanks, Craig
