@@ -1,6 +1,6 @@
 ---
 path: "/under-the-hood-of-graphql"
-date: "2020-11-12"
+date: "2020-11-24"
 title: "Under-the-hood of GraphQL"
 ---
 
@@ -18,22 +18,23 @@ This is part of my ["under-the-hood of" series](/introducing-my-under-the-hood-o
 - [Apollo](https://itnext.io/under-the-hood-of-apollo-6d8642066b28)
 - [Auto formatters (e.g. Prettier)](/under-the-hood-of-vscode-auto-formatters)
 
-A video for this talk can be found [here - TODO](). Part of my "under-the-hood of" series [here](https://www.youtube.com/channel/UCYi23MnKBKn0yLZKBrz5Bfw).
+<!-- A video for this talk can be found [here - TODO](). Part of my "under-the-hood of" series [here](https://www.youtube.com/channel/UCYi23MnKBKn0yLZKBrz5Bfw). -->
 
 The article today will be broken down into 2 parts:
 
 1. [Overview](#1-overview)
 
-   - [Building the schema](#building-schema)
+   - [Building the schema](#building-the-schema)
    - [The query lifecycle](#query-lifecycle)
    - [Introspection system](#introspection-system)
    - [Libraries](#libraries)
 
-2. [Building our own graphql library](#2-building-our-own-graphql-library)
+2. [Building our own GraphQL executor](#2-building-our-own-graphql-executor)
 
    - [Terms](#terms)
    - [Step 1 - Query and schema](#step-1---query-and-schema)
    - [Step 2 - Execute](#step-2---execute)
+   - [What have we missed?](#what-have-we-missed)
 
 ---
 
@@ -55,7 +56,7 @@ There is also a documentation-friendly website [graphql.org/learn](https://graph
 
 All languages follow the spec, and the JS `graphql` library frequently references part of it. We will be looking at that library as part of this section.
 
-### Building schema
+### Building the schema
 
 Building the schema is important part for a graphql application, as mentioned above it defines all types and their relationships. There are 2 steps to this
 
@@ -71,7 +72,7 @@ export function isSchema(schema) {
 
 #### 2. Transform AST into objects and instances
 
-We need a schema which is a type instance of `GraphQLSchema` (see above snippet). We then need objects inside the schema which match types, for example a scalar an object.
+We need a schema which is a type instance of `GraphQLSchema` (see above snippet). We then need objects inside the schema which match types, for example a scalar or an object.
 
 [Example of a scalar](https://github.com/graphql/graphql-js/blob/master/src/type/definition.js#L575) (below snippet)
 
@@ -248,7 +249,11 @@ This step is by far the most intensive and the step I often found the most confu
 1. Identify the operations i.e. a query or mutation? (several queries can be made at once)
 2. Then resolve each operation.
 
-For step (2) each query/mutation is run in isolation. GraphQL iterates over each field in the selection-set, if it is a scalar type resolve the field (`executeField`) else recurse the selection-sets until it resolves to a scalar.
+For step (2) each query/mutation is run in isolation.
+
+##### Resolving each operation
+
+For step 2 GraphQL iterates over each field in the selection-set, if it is a scalar type resolve the field (`executeField`) else recurse the selection-sets until it resolves to a scalar.
 
 The way this works is that the engine calls all fields on the root level at once and waits for all to return (this includes any promises). Then after reading the return type it cascades down the tree calling all sub-field resolvers with data from the parent resolver. Then it repeats this cascade on those field return types. So simply speaking it calls the top-level Query initially and then the root resolver for each type.
 
@@ -274,11 +279,11 @@ As part of my research I covered many different libraries, so I thought it was w
 The reference implementation of the GraphQL spec, but also full of useful tools for building GraphQL servers, clients and tooling.
 It's a GitHub organisation with many mono-repositories.
 
+It performs the entire Query Lifecycle (including parsing schema notation). Functions to do so above.
+
 ##### Schema
 
 Requires library specific `GraphQLSchema` instance. In order to be an executable schema it requires resolve functions.
-
-It performs the entire Query Lifecycle (including parsing schema notation). Functions to do so above.
 
 ##### Functions
 
@@ -331,7 +336,7 @@ Plugs into `apollo-server` and provides stats and information of your GraphQL se
 
 ---
 
-## 2: Building our own graphql library
+## 2: Building our own GraphQL executor
 
 Here we will build our own GraphQL `execute` function that a parsed query and our schema can run against. It will ignore any validation. We will use GraphQL instance types to create a schema, ignoring the schema parsing step.
 
@@ -397,7 +402,7 @@ We will be looking at 3 scenarios. Each scenario below will contain 2 images.
 1. The query AST - This is the query put into AST form (see comment for pre-AST form)
 2. The schema - This is how the schema looks (see comment for pre-schema parsing form)
 
-#### Scenario one
+#### Scenario 1
 
 A root query with resolver args.
 
@@ -411,7 +416,7 @@ Schema
 
 <img src="/images/graphql/scenario-1.png" alt="scenario-1" width="350px">
 
-#### Scenario two
+#### Scenario 2
 
 A root query with inner object and resolver args.
 
@@ -425,9 +430,9 @@ Schema
 
 <img src="/images/graphql/scenario-2.png" alt="scenario-2" width="350px">
 
-#### Scenario three
+#### Scenario 3
 
-A root type with inner object.
+A different root type with inner object.
 
 Query: `{ person { name } }`
 
@@ -463,7 +468,7 @@ If it exists (i.e. "Scenario 1") we call the resolver with the argument name and
 
 Line 32 we then check if the return types field exists on the Schemas `rootTypes` object. If so we execute it with the parents resolver data and then write that to the field on the response (line 36). For "Scenario 1" the `returnType` is a `String`, as a scalar this does not have `_fields` so this would not trigger. For "Scenario 2" the `returnType` is a `Person` which has `_fields`, one of which is `name` but right now the `field` is `test` so would not trigger under recursed below.
 
-Line 40 and 41 we check if this selection has got selection-sets itself and if so execute those. We hand the selection-set, the current response data for this field, and the current field name. So we are recursively calling `executeFields` with the deeper selection sets and build up a single response to return.
+Line 40 and 41 we check if this selection has got selection-sets itself and if so execute those. We hand the selection-set, the current response data for this field, and the current field name. So we are recursively calling `executeFields` with the deeper selection sets and build up a single response to return. "Scenario 2" will call the root query resolver first, then call `executeFields` again with the inner `name` field, where the fields resolver will be found and called with the existing resolver data.
 
 Lastly we return the built response data on line 48, see `userResp`.
 
@@ -471,7 +476,7 @@ Its worth noting we have omitted any scalar checks, with the real `graphql-js.ex
 
 #### Checking results
 
-In order to check this would work I wrote some unit tests found [here](https://github.com/craigtaub/our-own-graphql-server/blob/master/test/execute.spec.js). I initially ran them against `graphql-js.execute()` to ensure they were written correctly. I then swapped to using my executor. The schema objects are those show earlier, but this is all of it together.
+In order to check this would work I wrote some unit tests found [here](https://github.com/craigtaub/our-own-graphql-server/blob/master/test/execute.spec.js). It includes some pure assertions as well as spies and I initially ran them against `graphql-js.execute()` to ensure they were written correctly. I then swapped to using my executor. The schema objects are those shown earlier, but this is all of it together.
 
 Scenario 1 looks like this
 
@@ -495,9 +500,11 @@ Here is the results of the test runner:
 
 It works !!! Good job 👍💪
 
+I encourage anyone that is interested to check out the code and play with the mechanism yourself.
+
 ---
 
-## What have we missed
+## What have we missed?
 
 As mentioned there are many additional parts to the real graphql executor which we have omitted from our library. Some of those are:
 
