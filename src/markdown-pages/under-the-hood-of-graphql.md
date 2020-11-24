@@ -500,7 +500,7 @@ Here is the results of the test runner:
 
 It works !!! Good job 👍💪
 
-I encourage anyone that is interested to check out the code and play with the mechanism yourself.
+I encourage anyone that is interested to check out the [code](https://github.com/craigtaub/our-own-graphql-server) and play with the mechanism yourself.
 
 ---
 
