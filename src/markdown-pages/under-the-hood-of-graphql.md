@@ -389,7 +389,7 @@ ourExecute({ schema, document });
 // execute query AST with schema
 ```
 
-Norally this would be:
+Normally this would be:
 
 ```javascript
 // schema = built from "schema.graphql" and "graphql-tool" loadSchemaSync/makeExecutableSchema/addResolversToSchema
