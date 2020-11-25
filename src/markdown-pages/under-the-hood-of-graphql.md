@@ -91,9 +91,7 @@ The native scalar types defined for GraphQL are `ID`, `Int`, `Float`, `String` a
 
 #### Summarise
 
-Essentially for building the schema we turn...
-
-This graphql schema notation:
+Essentially for building the schema we turn this graphql schema notation:
 
 ```typescript
 type Book {
@@ -238,9 +236,9 @@ You can see this for yourself on [astexplorer](https://astexplorer.net/) under G
 
 This step ensures the request is executable against the provided Schema. Found under the [validate.js](https://github.com/graphql/graphql-js/blob/dd0297302800347a20a192624ba6373ee86836a3/src/validation/validate.js#L36) in the `graphql-js` library.
 
-While it is usally run just before execute, it can be useful to run in isolation. For exampple by a client before sending the query to the server. The benefit is that the validator could flag an invalid query before it is sent to the server, saving a HTTP request.
+While it is usally run just before execute, it can be useful to run in isolation. For example by a client before sending the query to the server. The benefit is that the validator could flag an invalid query before it is sent to the server, saving a HTTP request.
 
-It works by _checking each field in the query AST document against its corresponding type definition in the schema object_. It will do argument type compatibility as well as coercion checks.
+It works by _checking each field in the query AST document against its corresponding type definition in the schema object_. It will compare argument type compatibility as well as coercion checks.
 
 #### 3. Execute Query
 
@@ -279,13 +277,13 @@ As part of my research I covered many different libraries, so I thought it was w
 The reference implementation of the GraphQL spec, but also full of useful tools for building GraphQL servers, clients and tooling.
 It's a GitHub organisation with many mono-repositories.
 
-It performs the entire Query Lifecycle (including parsing schema notation). Functions to do so above.
+It performs the entire Query Lifecycle (including parsing schema notation).
 
 ##### Schema
 
-Requires library specific `GraphQLSchema` instance. In order to be an executable schema it requires resolve functions.
+Requires library specific `GraphQLSchema` instance. In order to be an executable schema it requires resolver functions.
 
-##### Functions
+##### Example functions
 
 [`buildClientSchema`](https://github.com/graphql/graphql-js/blob/dd0297302800347a20a192624ba6373ee86836a3/src/utilities/buildClientSchema.js#L76)
 
@@ -299,7 +297,7 @@ Requires library specific `GraphQLSchema` instance. In order to be an executable
 
 It's an abstraction on top of `graphql-js`. Houses lots of functionality including generating a fully spec-supported schema and stitching multiple schemas together.
 
-##### Functions
+##### Example functions
 
 `makeExecutableSchema`
 
@@ -310,11 +308,11 @@ It's an abstraction on top of `graphql-js`. Houses lots of functionality includi
 
 `loadSchemaSync`
 
-- Point this to the source to load schema from and it returns a `GraphQLSchema`.
+- Point this to the source to load your schema from and it returns a `GraphQLSchema`.
 
 [`addResolversToSchema`](https://github.com/ardatan/graphql-tools/blob/master/packages/schema/src/addResolversToSchema.ts#L36)
 
-- Takes `GraphQLSchema` and `resolvers` then returns an updated `GraphQLSchema`.
+- Takes a `GraphQLSchema` and `resolvers` then returns an updated `GraphQLSchema`.
 
 #### apollo-server
 
