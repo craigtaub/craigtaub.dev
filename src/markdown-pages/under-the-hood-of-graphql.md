@@ -397,7 +397,7 @@ execute({ schema, document })
 
 We will be looking at 3 scenarios. Each scenario below will contain 2 images.
 
-1. The query AST - This is the query put into AST form (see comment for pre-AST form)
+1. The query AST - This is the query put into AST form
 2. The schema - This is how the schema looks (see comment for pre-schema parsing form)
 
 #### Scenario 1
@@ -464,13 +464,13 @@ Line 20 we iterate over all selection-set selections (so this part works with mu
 
 If it exists (i.e. "Scenario 1") we call the resolver with the argument name and value, and then place the data returned from the resolver onto that field name (e.g. `user`) on the response (line 28).
 
-Line 32 we then check if the return types field exists on the Schemas `rootTypes` object. If so we execute it with the parents resolver data and then write that to the field on the response (line 36). For "Scenario 1" the `returnType` is a `String`, as a scalar this does not have `_fields` so this would not trigger. For "Scenario 2" the `returnType` is a `Person` which has `_fields`, one of which is `name` but right now the `field` is `test` so would not trigger under recursed below.
+Line 32 we then check if the return types field exists on the Schemas `rootTypes` object. If so we execute it with the parents resolver data and then write that to the field on the response (line 36). For "Scenario 1" the `returnType` is a `String`, as a scalar this does not have `_fields` so this would not trigger. For "Scenario 2" the `returnType` is a `Person` which has `_fields`, one of which is `name` but right now the `field` is `test` so would not trigger until recursed below.
 
-Line 40 and 41 we check if this selection has got selection-sets itself and if so execute those. We hand the selection-set, the current response data for this field, and the current field name. So we are recursively calling `executeFields` with the deeper selection sets and build up a single response to return. "Scenario 2" will call the root query resolver first, then call `executeFields` again with the inner `name` field, where the fields resolver will be found and called with the existing resolver data.
+Line 40 and 41 we check if this selection has got selection-sets itself and if so execute those. We hand the selection-set, the current response data for this field, and the current field name. So we are recursively calling `executeFields` with the deeper selection sets and building up a single response to return. "Scenario 2" will call the root query resolver first, then call `executeFields` again with the inner `name` field, where the fields resolver will be found and called with the existing resolver data.
 
 Lastly we return the built response data on line 48, see `userResp`.
 
-Its worth noting we have omitted any scalar checks, with the real `graphql-js.execute` the field type is checked as part of the validation to make sure if it isn't a scalar it has sub selections. However line 32 (`rootTypes?.[returnType]?._fields?.[field]?.resolve`) is a kind of scalar check (scalars don't have `_fields`).
+Its worth noting we have omitted any scalar checks, with the real `graphql-js.execute` the field type is checked as part of the validation to make sure that non-scalars should have sub selections. However line 32 (`rootTypes?.[returnType]?._fields?.[field]?.resolve`) is a kind of scalar check (scalars don't have `_fields`).
 
 #### Checking results
 
@@ -515,6 +515,6 @@ As mentioned there are many additional parts to the real graphql executor which 
 
 ---
 
-Thanks so much for reading or watching, I learnt a huge amount about GraphQL from this research and I hope it was useful for you. You can find the repository for all this code [here](https://github.com/craigtaub/our-own-graphql-server).
+Thanks so much for reading (or watching), I learnt a huge amount about GraphQL from this research and I hope it was useful for you. You can find the repository for all this code [here](https://github.com/craigtaub/our-own-graphql-server).
 
 Thanks, Craig 😃
