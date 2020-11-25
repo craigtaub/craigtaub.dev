@@ -472,7 +472,7 @@ Line 40 and 41 we check if this selection has got selection-sets itself and if s
 
 Lastly we return the built response data on line 48, see `userResp`.
 
-Its worth noting we have omitted any scalar checks, with the real `graphql-js.execute` the field type is checked as part of the validation to make sure if it isn't a scalar it has sub selections. However line 32 (`rootTypes?.[returnType]?._fields?.[field]?.resolve`) is a kind of scalar check.
+Its worth noting we have omitted any scalar checks, with the real `graphql-js.execute` the field type is checked as part of the validation to make sure if it isn't a scalar it has sub selections. However line 32 (`rootTypes?.[returnType]?._fields?.[field]?.resolve`) is a kind of scalar check (scalars don't have `_fields`).
 
 #### Checking results
 
