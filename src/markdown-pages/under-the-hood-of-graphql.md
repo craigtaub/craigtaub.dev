@@ -1,6 +1,6 @@
 ---
 path: "/under-the-hood-of-graphql"
-date: "2020-11-24"
+date: "2020-11-28"
 title: "Under-the-hood of GraphQL"
 ---
 
