@@ -4,7 +4,7 @@ date: "2020-05-28"
 title: "Introducing my under-the-hood of series"
 ---
 
-I am producing a blog and video series taking an indepth look at the mechanisms inside of different tools and libraries found in the JavaScript ecosystem.
+I am producing a blog and video series taking an indepth look at the mechanisms inside of different tools and libraries found in the JavaScript ecosystem. My approach is to start with an overview then <b>build mini (~50 lines) working versions</b> of them.
 
 ## Topics covered so far
 
@@ -20,7 +20,7 @@ I am producing a blog and video series taking an indepth look at the mechanisms 
 ## Future topics
 
 - Linters (e.g Eslint)
-- Go a suggestion? Email me at **craigtaub@gmail.com**
+- Got a suggestion? Email me at **craigtaub@gmail.com**
 
 # Prefer watching a walk-through?
 
