@@ -408,7 +408,7 @@ const commit = () => {
       acc.push(curr.children); // (3b)
       acc.push([clone]);
     } else {
-      acc[key].push(curr); (3c)
+      acc[key].push(curr); // (3c)
     }
     return acc;
   }, []);
