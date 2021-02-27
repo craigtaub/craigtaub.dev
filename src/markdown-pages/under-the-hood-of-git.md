@@ -139,7 +139,7 @@ ref: refs/heads/master
 2e1803ee08fa9aa36e4c5918220e283380a4c385
 ```
 
-#### Branch
+### Branch
 
 A branch is actually just a named pointer to specific snapshot.
 When it is checked out
@@ -148,7 +148,7 @@ When it is checked out
 2. moves all content from the current branch repo into the index file, so it's easy to track changes.
 3. Make working dir match content of commit pointing to (using tree and blob objects to update working dir contents)
 
-#### Tags
+### Tags
 
 An alias for a commit id. The HEAD will point to the latest or predefined e.g. `.git/refs/heads/tags/<tag_name>`
 
