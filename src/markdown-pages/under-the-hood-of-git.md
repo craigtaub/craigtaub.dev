@@ -216,8 +216,7 @@ const init = () => {
   const workingDirectory = workingDir()
   const files = glob.sync("**/*.txt", { cwd: workingDirectory }) // (1)
 
-  const indexData = files.reduce((acc, curr) => {
-    // (2)
+  const indexData = files.reduce((acc, curr) => { // (2)
     const hash = hashFileStats(curr)
     acc[curr] = {
       cwd: hash,
@@ -248,11 +247,9 @@ const status = () => {
 
   const notStaged = []
   const notComitted = []
-  const updatedIndexData = Object.keys(indexData).reduce((acc, curr) => {
-    // (2)
+  const updatedIndexData = Object.keys(indexData).reduce((acc, curr) => { // (2)
     const hash = hashFileStats(curr) // (2a)
-    if (hash !== indexData[curr].cwd) {
-      // (2b)
+    if (hash !== indexData[curr].cwd) { // (2b)
       acc[curr] = {
         cwd: hash,
         staging: indexData[curr].staging,
@@ -324,10 +321,8 @@ const add = () => {
     }
   })
 
-  const updatedIndexData = Object.keys(indexData).reduce((acc, curr) => {
-    // (5)
-    if (!updatedFiles.find(item => item.file === curr)) {
-      // (5a)
+  const updatedIndexData = Object.keys(indexData).reduce((acc, curr) => { // (5)
+    if (!updatedFiles.find(item => item.file === curr)) { // (5a)
       acc[curr] = {
         cwd: indexData[curr].cwd,
         staging: indexData[curr].staging,
@@ -362,61 +357,61 @@ const add = () => {
 // imports excluded, see linked repo for details
 
 // array of dir (name) and files (children), ordered by bottom-up
-const _buildTree = (paths) => {
+const _buildTree = paths => {
   return paths.reduce(
     (parent, path, key) => {
       path.split("/").reduce((r, name, i, { length }) => {
         if (!r.children) {
-          r.children = [];
+          r.children = []
         }
-        let temp = r.children.find((q) => q.name === name);
+        let temp = r.children.find(q => q.name === name)
         if (!temp) {
-          temp = { name };
+          temp = { name }
           if (i + 1 === length) {
-            temp.type = "blob";
-            temp.hash = hashBlobContentsInFile(path);
+            temp.type = "blob"
+            temp.hash = hashBlobContentsInFile(path)
           } else {
-            temp.type = "tree";
+            temp.type = "tree"
           }
-          r.children.push(temp);
+          r.children.push(temp)
         }
-        return temp;
-      }, parent);
+        return temp
+      }, parent)
 
-      return parent;
+      return parent
     },
     { children: [] }
-  ).children;
-};
+  ).children
+}
 
 const commit = () => {
-  const workingDirectory = workingDir();
-  const indexData = getIndexData();
+  const workingDirectory = workingDir()
+  const indexData = getIndexData()
   // TODO - if comitted already then dont recreate tree?? PROB chek first
   const paths = Object.keys(indexData).filter( // (1)
-    (item) => indexData[item].staging || indexData[item].repository
-  );
+    item => indexData[item].staging || indexData[item].repository
+  )
 
-  const rootTrees = _buildTree(paths); // (2)
+  const rootTrees = _buildTree(paths) // (2)
 
   const flattenedTrees = rootTrees.reverse().reduce((acc, curr, key) => { // (3)
     if (curr.children) {
-      const hash = createTreeObject(curr.children); // (3a)
-      const clone = Object.assign({}, curr);
-      delete clone.children;
-      clone.hash = hash;
-      acc.push(curr.children); // (3b)
-      acc.push([clone]);
+      const hash = createTreeObject(curr.children) // (3a)
+      const clone = Object.assign({}, curr)
+      delete clone.children
+      clone.hash = hash
+      acc.push(curr.children) // (3b)
+      acc.push([clone])
     } else {
-      acc[key].push(curr); // (3c)
+      acc[key].push(curr) // (3c)
     }
-    return acc;
-  }, []);
+    return acc
+  }, [])
 
-  const rootTree = flattenedTrees.reverse()[0];
-  const treeForCommit = createTreeObject(rootTree); // (4)
+  const rootTree = flattenedTrees.reverse()[0]
+  const treeForCommit = createTreeObject(rootTree) // (4)
 
-  const parent = getParentCommit();
+  const parent = getParentCommit()
 
   const commit = { // (5)
     tree: treeForCommit,
@@ -424,26 +419,26 @@ const commit = () => {
     author: "CRAIG", // hardcoded for now
     committor: "CRAIG",
     message: "Initial commit",
-  };
+  }
 
-  const commitHash = createCommitObject(commit); // (6)
+  const commitHash = createCommitObject(commit) // (6)
 
   const updatedIndexData = Object.keys(indexData).reduce((acc, curr) => { // (7)
-    const { cwd, staging, repository } = indexData[curr];
-    let updatedRepo = repository;
-    if (staging !== repository) { (7a)
-      updatedRepo = staging;
+    const { cwd, staging, repository } = indexData[curr]
+    let updatedRepo = repository
+    if (staging !== repository) { // (7a)
+      updatedRepo = staging
     }
     acc[curr] = {
       cwd: indexData[curr].cwd,
       staging: indexData[curr].staging,
       repository: updatedRepo,
-    };
-    return acc;
-  }, {});
-  updateIndex(updatedIndexData);
+    }
+    return acc
+  }, {})
+  updateIndex(updatedIndexData)
 
-  fs.writeFileSync(`${workingDirectory}/.repo/HEAD`, commitHash); // (8)
+  fs.writeFileSync(`${workingDirectory}/.repo/HEAD`, commitHash) // (8)
 }
 ```
 
