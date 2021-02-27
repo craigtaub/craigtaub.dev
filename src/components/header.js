@@ -35,7 +35,7 @@ const Header = ({ siteTitle }) => (
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://medium.com/@tabu_craig"
+          href="https://tabu-craig.medium.com/"
         >
           Medium
         </a>
