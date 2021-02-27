@@ -234,9 +234,9 @@ const init = () => {
 }
 ```
 
-(1) grab all the files from the current working directory <br>
-(2) build the index file using files stat() SHA-1 hash for each file <br>
-(3) write a repository folder under `.repo` <br>
+(1) Grab all the files from the current working directory <br>
+(2) Build the index file using files stat() SHA-1 hash for each file <br>
+(3) Write a repository folder under `.repo` <br>
 (4) Inside repository write a `HEAD` file and `objects` folder <br>
 
 #### status.mjs
@@ -280,15 +280,15 @@ const status = () => {
 }
 ```
 
-(1) grab the index data <br>
-(2) for each item in the index data <br>
-(2a) grab files stat() SHA-1 hash <br>
-(2b) if doesnt match current working dir stored hash of file, flag as changed not staged <br>
-(2c) if does match above but doesnt match staged, flag as not staged <br>
-(2d) if does match staged but not repository, flag as not comitted <br>
-(3) update index file <br>
-(4) output local changes not staged <br>
-(5) output staged changes not comitted <br>
+(1) Grab the index data <br>
+(2) For each item in the index data <br>
+(2a) Grab files stat() SHA-1 hash <br>
+(2b) If doesnt match current working dir stored hash of file, flag as changed not staged <br>
+(2c) If does match above but doesnt match staged, flag as not staged <br>
+(2d) If does match staged but not repository, flag as not comitted <br>
+(3) Update index file <br>
+(4) Output local changes not staged <br>
+(5) Output staged changes not comitted <br>
 
 #### add.mjs
 
@@ -347,10 +347,10 @@ const add = () => {
 }
 ```
 
-(1) explicitly give files e.g. `one.txt` and `two/three.txt` <br>
-(2) for each file, get contents in SHA-1 and use for directory name and filename <br>
-(3) get DEFLATED value and use for content <br>
-(4) get SHA-1 value for files `stat()` <br>
+(1) Explicitly give files e.g. `one.txt` and `two/three.txt` <br>
+(2) For each file, get contents in SHA-1 and use for directory name and filename <br>
+(3) Get DEFLATED value and use for content <br>
+(4) Get SHA-1 value for files `stat()` <br>
 (5) Update the index <br>
 (5a) If file was not touched, just proxy values <br>
 (5b) If file was touched, update staging for the file <br>
