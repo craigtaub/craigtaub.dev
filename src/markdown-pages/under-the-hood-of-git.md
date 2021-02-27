@@ -139,7 +139,7 @@ ref: refs/heads/master
 2e1803ee08fa9aa36e4c5918220e283380a4c385
 ```
 
-### Branch
+### Branches
 
 A branch is actually just a named pointer to specific snapshot.
 When it is checked out
