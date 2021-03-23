@@ -36,7 +36,7 @@ This is part of my ["under-the-hood of" series](/introducing-my-under-the-hood-o
 - [Apollo](https://itnext.io/under-the-hood-of-apollo-6d8642066b28)
 - [Auto formatters (e.g. Prettier)](/under-the-hood-of-vscode-auto-formatters)
 
-A video for this talk will soon be added to my "under-the-hood of" [YouTube series](https://www.youtube.com/channel/UCYi23MnKBKn0yLZKBrz5Bfw).
+A video for this talk can be found [here](https://www.youtube.com/watch?v=p5NlGqgDbQg). Part of my "under-the-hood of" [series here](https://www.youtube.com/channel/UCYi23MnKBKn0yLZKBrz5Bfw).
 
 The article today will be broken down into:
 
