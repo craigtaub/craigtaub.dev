@@ -20,6 +20,11 @@ I am producing a blog and video series taking an indepth look at the mechanisms 
 
 ## Future topics
 
+- npm/yarn - package managers
+- Blockchain
+- Ethereum
+- esbuild
+- styled-components
 - Linters (e.g Eslint)
 - Got a suggestion? Email me at **craigtaub@gmail.com**
 
