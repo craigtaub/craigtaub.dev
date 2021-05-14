@@ -23,6 +23,8 @@ I set up a <a href="https://mailchi.mp/ea6a77bd5a3e/javascript-under-the-hood-of
 
 I post blog updates on <a href="https://twitter.com/craigtaub" target="\_blank">Twitter</a>.
 
+I post JavaScript videos on <a href="https://www.youtube.com/channel/UCYi23MnKBKn0yLZKBrz5Bfw" target="\_blank">YouTube</a>.
+
 ## Thank you!
 
 Thank you for being interested. If you have any feedback I would love to hear it!

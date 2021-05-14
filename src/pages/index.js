@@ -23,6 +23,7 @@ const IndexPage = ({
         <br />
         <img
           width="200px"
+          alt="Me"
           height="200px"
           src="https://craigtaub.dev/images/me.png"
           style={{ float: "right", padding: "20px" }}
@@ -41,7 +42,11 @@ const IndexPage = ({
         <ul>
           <li>
             Email :{" "}
-            <a target="_blank" href="mailto:craigtaub@gmail.com">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="mailto:craigtaub@gmail.com"
+            >
               craigtaub@gmail.com
             </a>
           </li>
