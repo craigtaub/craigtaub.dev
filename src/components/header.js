@@ -30,31 +30,7 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1>
       <section className="header-links">
-        <Link to="/about">About</Link>
-        &nbsp;|&nbsp;
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://tabu-craig.medium.com/"
-        >
-          Medium
-        </a>
-        &nbsp;|&nbsp;
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/craigtaub"
-        >
-          GitHub
-        </a>
-        &nbsp;|&nbsp;
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://twitter.com/craigtaub"
-        >
-          Twitter
-        </a>
+        <Link to="/subscribe">Subscribe</Link>
       </section>
     </div>
   </header>

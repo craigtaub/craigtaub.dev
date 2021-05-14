@@ -23,7 +23,23 @@ const Layout = ({ children }) => {
           paddingTop: 0,
         }}
       >
-        <main>{children}</main>
+        <main
+          style={
+            {
+              // new fonts
+              // fontFamily: "Comfortaa, cursive",
+              // fontFamily: "'PT Serif', serif",
+              // mobile
+              // fontSize: "16px",
+              // lineHeight: "28px",
+              // desktop
+              // fontSize: "19.2px",
+              // lineHeight: "33.6px",
+            }
+          }
+        >
+          {children}
+        </main>
       </div>
     </>
   )
