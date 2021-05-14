@@ -24,7 +24,7 @@ const IndexPage = ({
         <img
           width="200px"
           height="200px"
-          src="http://craigtaub.dev/images/me.png"
+          src="https://craigtaub.dev/images/me.png"
           style={{ float: "right", padding: "20px" }}
         />
         <br /> I am a software engineer living in London. I post mainly about{" "}
