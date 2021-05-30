@@ -60,7 +60,7 @@ The most popular commands are:
 
 Example output below:
 
-<img src="../images/npm-install-log.png" alt="npm-install-log" width="350px">
+<img src="/images/npm/npm-install-log.png" alt="npm-install-log" width="350px">
 
 ##### Lockfile
 
@@ -92,7 +92,7 @@ Generates `package-lock.json` - describes dependency tree that was installed. Fo
 - Create tarball (a zip) of the package (`package.tar.gz`)
 - Example screenshot below:
 
-<img src="../images/npm-pack.png" alt="npm-pack" width="350px">
+<img src="/images/npm/npm-pack.png" alt="npm-pack" width="350px">
 
 #### `npm publish`
 
@@ -141,7 +141,7 @@ The README markdown file is loaded as the landing page content with markdown ren
 
 NPM also shows a load of other information such as the weekly download number, latest version, unpacked size and github location.
 
-<img src="../images/npm-package.png" alt="npm3-package-page" width="450px">
+<img src="/images/npm/npm-package.png" alt="npm3-package-page" width="450px">
 
 ---
 
@@ -211,7 +211,7 @@ reset:
 
 Opening the browser confirms the database and couchDb instance exists
 
-<img src="../images/npm-couch-db.png" alt="npm-couch-db" width="600px">
+<img src="/images/npm/npm-couch-db.png" alt="npm-couch-db" width="600px">
 
 ### CLI
 
@@ -593,19 +593,19 @@ reset:
 - `our-npm-publish` -> Publish the `example-lib` package to our registry
 - `GET http://localhost:5984/registry/example-lib/example-lib.tar.gz` -> Location of the registry package tarball
 - `GET http://localhost:3000/packages/example-lib` -> Package `README` on website (screenshot below)
-  <img src="../images/npm-website-markdown.png" alt="npm-website-markdown" width="450px">
+  <img src="/images/npm/npm-website-markdown.png" alt="npm-website-markdown" width="450px">
 
 5. Use package
 
 - `cd ../example-app`
 - `npm start` -> See the missing package error (screenshot below)
-  <img src="../images/npm-start-error.png" alt="npm" width="450px">
+  <img src="/images/npm/npm-start-error.png" alt="npm" width="450px">
 
 - `our-npm-install` -> Install the packages from `package.json` -> `ourDeps` list (screenshot below)
-  <img src="../images/npm-install-works.png" alt="npm" width="350px">
+  <img src="/images/npm/npm-install-works.png" alt="npm" width="350px">
 
 - `npm start` -> Package found, now it works (screenshot below)
-  <img src="../images/npm-start-works.png" alt="npm" width="450px">
+  <img src="/images/npm/npm-start-works.png" alt="npm" width="450px">
 
 So thats it 🙌, our mini NPM works.
 
