@@ -4,9 +4,9 @@ date: "2021-05-30"
 title: "Under-the-hood of NPM"
 ---
 
-NPM is the official package manager for the NodeJS ecosystem. Since the first release of NodeJS it has come with NPM built-in. The initial release date for NPM was 12 January 2010 and since then has grown into the World largest software registry.
+NPM is the official package manager for the NodeJS ecosystem. Since the first release of NodeJS it has come with NPM built-in. The initial release date for NPM was 12 January 2010 and since then has grown into the Worlds largest software registry.
 
-I would expect most engineers in the JavaScript ecosystem to know all about NPM, as it is critical to most local, CI and CD flows. However in the overview section I am going to cover the core functionality, as this is what we will focus on building later.
+I would expect most engineers in the JavaScript ecosystem to know all about either NPM or Yarn, as they are critical to most local, CI and CD flows. However in the overview section I am going to cover the core functionality, as this is what we will focus on building later.
 
 This is part of my ["under-the-hood of" series](/introducing-my-under-the-hood-of-series):
 
