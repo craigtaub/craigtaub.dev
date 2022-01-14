@@ -5,3 +5,7 @@
  */
 require("prismjs/themes/prism-okaidia.css")
 // You can delete this file if you're not using it
+
+if (global.window.location.pathname === '/intro') {
+  window.location.replace("introducing-my-under-the-hood-of-series");
+}
