@@ -12,6 +12,7 @@ I am producing a blog and video series taking an indepth look at the mechanisms 
 - [Web bundlers (e.g. Webpack)](/under-the-hood-of-web-bundlers)
 - [Type systems (e.g. TypeScript)](/under-the-hood-of-type-systems)
 - [GraphQL](/under-the-hood-of-graphql)
+- [GraphQL DataLoader](/under-the-hood-of-graphql-dataloader)
 - [Git version control](/under-the-hood-of-git)
 - [Source maps](/source-maps-from-top-to-bottom)
 - [Docker](/under-the-hood-of-docker)
