@@ -29,8 +29,8 @@ const IndexPage = ({
           style={{ float: "right", padding: "20px" }}
         />
         <br /> I am a software engineer living in London. I post mainly about{" "}
-        <b>JavaScript</b> and <b>NodeJS</b> but also occasionally about
-        performance, testing, databases, dev-ops and best-practices. <br />
+        <b>JavaScript</b> and <b>NodeJS</b> but more recently about{" "}
+        <b>backend architecture</b> and and best-practices. <br />
         Also was on the MochaJS core team for over 3 years, testing and
         open-source is something I care deeply about. Lastly I am a big football
         fan and support QPR.
