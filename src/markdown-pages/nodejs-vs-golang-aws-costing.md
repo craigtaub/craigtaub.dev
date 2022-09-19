@@ -67,14 +67,57 @@ So now lets actually dig into what changes with those if we swap to Golang.
 
 ### What is the saving?
 
+Here is a link to the pricing pages to review my comments below yourselves:
+
+- EC2 on-demand [here](https://aws.amazon.com/ec2/pricing/on-demand/).
+- Fargate [here](https://aws.amazon.com/fargate/pricing/).
+- Lambda [here](https://aws.amazon.com/lambda/pricing/).
+
 ### EC2
 
 We are paying per "on-demand instance hour", which means we pay for the compute capacity we used from the time the instance launched until it was terminated or stopped.
 
-Let us assume Golang is double as fast as NodeJS - many different benchmarks do support a similar theory.
+Let us assume Golang is twice as fast as NodeJS - many different benchmarks do support a similar theory.
 
-Of the £2k bill £1.5k is the "on-demand per instance hour", so that is brough down to £750. So the total EC2 bill is £1,250. Down from £2k.
+Of the £2k bill £1.5k is the "on-demand per instance hour" (the rest is related to NatGateway), so that is brough down to £750. So the total EC2 bill is £1,250. Down from £2k.
 
 ### Fargate
 
-https://docs.google.com/document/d/1ITyiptLR7KRzEXHYuzPNibfEH1rDDjDMPiSFHx3jKD8/edit#
+Fargate pricing is very similar to EC2 on-demand model, in that we pay for the resources used from time the pod starts until it's terminated. It applies for memory, cpu and storage all per hour.
+
+Of the £1000 bill £800 is for the hourly vCPU charges.
+
+Similar to above we assume Golang to be twice as fast, we reduce £800 to £400 bringing the overall Fargate bill to £600.
+
+### Lambda
+
+The last application type is a serverless lambda. With lambdas we typically pay for:
+
+- Invoke numbers
+- Duration
+
+In general it seems duration costs are higher than invoke numbers.
+
+CompanyX currently only pays £160, £140 of which is for compute time, the other £20 is for request count.
+
+So by speeding up our compute time we can possibly halve the cost to £70. Bringing the total for Lambda to £90 a month.
+
+### The savings
+
+Above produces to following savings:
+
+- EC2 - £750
+- Fargate - £400
+- Lambda - £70
+
+That is a total saving of £1,220. That is 8% from our overall total bill of £13,920.
+
+### Overall
+
+So thats it - for CompanyX they will save £1,220 a month - which will bring their yearly bill down from £167,040 to £152,400. So £15,000 they can spend on something else.
+
+From my experience to most companies, including startups, £15,000 is pretty small.
+
+Considering the amount of developer time and effort which will have to be invested in order to learn and implement Golang, it does not seem worth it <b>purely</b> for cost reasons. However as I said at the start, if the reasons are more than cost than it definitely can reap long-term benefits.
+
+Thanks for reading my article - I hope you found it useful.
