@@ -100,6 +100,7 @@ In general it seems duration costs are higher than invoke numbers.
 
 CompanyX currently only pays £160, £140 of which is for compute time, the other £20 is for request count.
 
+We will need the same number of invoke numbers, as the same number of clients will be requesting data, but the latency is lower.
 So by speeding up our compute time we can possibly halve the cost to £70. Bringing the total for Lambda to £90 a month.
 
 ### The savings
