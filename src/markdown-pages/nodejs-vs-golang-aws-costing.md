@@ -43,6 +43,10 @@ So its February and we check out the bill for the first month of the Year, the c
 
 The total bill came to £13,920.
 
+Here you can see the % of products of the entire bill.
+<img src="/images/npm/total-bill-pre-savings.png" alt="bill pre savings" width="350px">
+
+
 ### What can we ignore?
 
 So many of those services it would not matter if we were using Golang, those services are listed below
@@ -112,6 +116,9 @@ Above produces to following savings:
 - Lambda - £70
 
 That is a total saving of £1,220. That is 8% from our overall total bill of £13,920.
+
+After applying the saving, here you can see the % of products of the entire bill.
+<img src="/images/npm/total-bill-post-savings.png" alt="bill post savings" width="350px">
 
 ### Overall
 
