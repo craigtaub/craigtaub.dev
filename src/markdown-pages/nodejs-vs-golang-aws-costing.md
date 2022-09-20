@@ -121,6 +121,6 @@ From my experience to most companies, including startups, £15,000 is pretty sma
 
 Considering the amount of developer time and effort which will have to be invested in order to learn and implement Golang, it does not seem worth it <b>purely</b> for cost reasons. However as I said at the start, if the reasons are more than cost than it definitely can reap long-term benefits.
 
-Please do remember this is just a numbers exercise, but I have tried to base it on a real scneario.
+Please do remember this is just a numbers exercise, but I have tried to base it on a real scenario.
 
 Thanks for reading my article - I hope you found it useful.
