@@ -44,7 +44,7 @@ So its February and we check out the bill for the first month of the Year, the c
 The total bill came to £13,920.
 
 Here you can see the % of products of the entire bill. <br />
-<img src="/images/total-bill-pre-savings.png" alt="bill pre savings" width="350px">
+<img src="/images/total-bill-pre-savings.png" alt="bill pre savings" width="550px">
 
 
 ### What can we ignore?
@@ -118,7 +118,7 @@ Above produces to following savings:
 That is a total saving of £1,220. That is 8% from our overall total bill of £13,920.
 
 After applying the saving, here you can see the % of products of the entire bill. <br />
-<img src="/images/total-bill-post-savings.png" alt="bill post savings" width="350px">
+<img src="/images/total-bill-post-savings.png" alt="bill post savings" width="550px">
 
 ### Overall
 
