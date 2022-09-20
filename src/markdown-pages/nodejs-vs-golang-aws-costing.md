@@ -15,7 +15,7 @@ We will use an example company so we have something to compare against.
 
 ### Introducing CompanyX
 
-They have a website, native mobile apps and TV app, all powered by an API run entirely on AWS.
+They have a website, native mobile apps and TV app, all powered by an API run entirely on AWS. The surve to tens of thousands of users which produces millions of requests.
 A summary of the tech stack includes
 
 - Fargate (via ECS and EKS) - for the API
@@ -120,5 +120,7 @@ So that's it - for CompanyX they will save £1,220 a month - which will bring th
 From my experience to most companies, including startups, £15,000 is pretty small.
 
 Considering the amount of developer time and effort which will have to be invested in order to learn and implement Golang, it does not seem worth it <b>purely</b> for cost reasons. However as I said at the start, if the reasons are more than cost than it definitely can reap long-term benefits.
+
+Please do remember this is just a numbers exercise, but I have tried to base it on a real scneario.
 
 Thanks for reading my article - I hope you found it useful.
