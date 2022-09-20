@@ -4,12 +4,12 @@ date: "2022-09-19"
 title: "NodeJS vs Golang - an AWS costing exercise"
 ---
 
-When you look at the backend landscape currently there are many popular languages - I would say Golang and Python are the most popular, with NodeJS/TypeScript towards the top of the list expecially when the role requires some full-stack work.
+When you look at the backend landscape, currently there are many popular languages - I would say Golang and Python are the most popular, with NodeJS/TypeScript towards the top of the list especially when the role requires some full-stack work.
 
-I am not going to argue against Golang today - it is a great langauge with many years of hard work to build out its performance, syntax, tooling, community and many more assets.
+I am not going to argue against Golang today - it is a great language with many years of hard work to build out its performance, syntax, tooling, community and many more assets.
 
-The part I want to look at today is whether there is much value is migrating from TypeScript to Golang for <b>purely cost reasons</b>.
-I want to answer what kind of saving would it offer to a company who use many of AWS products??
+The part I want to look at today is whether there is much value in migrating from TypeScript to Golang for <b>purely cost reasons</b>.
+I want to answer what kind of savings would it offer to a company who uses many of AWS products??
 
 We will use an example company so we have something to compare against.
 
@@ -61,11 +61,11 @@ That leaves just below:
 - Fargate
 - Lambda
 
-That means the maximum saving from the bill is £3,150, that is 22% from the overall bill. That is pretty good its just under a quarter. However we still need those services, they will just be run using Golang rather than NodeJS.
+That means the maximum saving from the bill is £3,150, that is 22% from the overall bill. That is pretty good it's just under a quarter. However we still need those services, they will just be run using Golang rather than NodeJS.
 
-So now lets actually dig into what changes with those if we swap to Golang.
+So now let's actually dig into what changes with those if we swap to Golang.
 
-### What is the saving?
+### What is the savings?
 
 Here is a link to the pricing pages to review my comments below yourselves:
 
@@ -79,7 +79,7 @@ We are paying per "on-demand instance hour", which means we pay for the compute 
 
 Let us assume Golang is twice as fast as NodeJS - many different benchmarks do support a similar theory.
 
-Of the £2k bill £1.5k is the "on-demand per instance hour" (the rest is related to NatGateway), so that is brough down to £750. So the total EC2 bill is £1,250. Down from £2k.
+Of the £2k bill £1.5k is the "on-demand per instance hour" (the rest is related to NatGateway), so that is brought down to £750. So the total EC2 bill is £1,250. Down from £2k.
 
 ### Fargate
 
@@ -114,7 +114,7 @@ That is a total saving of £1,220. That is 8% from our overall total bill of £1
 
 ### Overall
 
-So thats it - for CompanyX they will save £1,220 a month - which will bring their yearly bill down from £167,040 to £152,400. So £15,000 they can spend on something else.
+So that's it - for CompanyX they will save £1,220 a month - which will bring their yearly bill down from £167,040 to £152,400. So £15,000 they can spend on something else.
 
 From my experience to most companies, including startups, £15,000 is pretty small.
 
