@@ -28,9 +28,10 @@ const IndexPage = ({
           src="https://craigtaub.dev/images/me.png"
           style={{ float: "right", padding: "20px" }}
         />
-        <br /> I am a software engineer living in London. I post mainly about{" "}
+        <br />I am a Tech Lead living in London. I post mainly about{" "}
         <b>JavaScript</b> and <b>NodeJS</b> but more recently about{" "}
-        <b>backend architecture</b> and and best-practices. <br />
+        <b>backend architecture</b>, <b>cloud computing</b> and{" "}
+        <b>best-practices</b>. <br />
         Also was on the MochaJS core team for over 3 years, testing and
         open-source is something I care deeply about. Lastly I am a big football
         fan and support QPR.
