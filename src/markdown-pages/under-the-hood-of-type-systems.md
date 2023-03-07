@@ -129,11 +129,11 @@ Next we will have a look at the steps required to perform all of the above jobs 
 
 Parsers check the _"syntax"_ of given code. A type system will have to house its own parser, often containing thousands of lines of code.
 
-The [Babel parser](https://babeljs.io/docs/en/babel-parser) contains 2,100 lines of code just to process code statements (see it [here](https://github.com/babel/babel/blob/master/packages/babel-parser/src/parser/statement.js)) which can understand the syntactical analysis of any compiler-specific code but also append additional information for types.
+The [Babel parser](https://babeljs.io/docs/en/babel-parser) contains 2,100 lines of code just to process code statements (see it [here](https://github.com/babel/babel/blob/v7.9.6/packages/babel-parser/src/parser/statement.js)) which can understand the syntactical analysis of any compiler-specific code but also append additional information for types.
 
-Hegel appends a `typeAnnotation` property to code which has a type annotation (you can see it doing it [here](https://github.com/JSMonk/hegel/blob/master/packages/core/src/utils/type-utils.js#L65)).
+Hegel appends a `typeAnnotation` property to code which has a type annotation (you can see it doing it [here](https://github.com/JSMonk/hegel/blob/769ed2368690f6f38dadb921a99f1382ad1ef708/packages/core/src/utils/type-utils.js#L65)).
 
-TypeScript's parser is a whopping 8,600 lines of code (find where it begins traversing the tree [here](https://github.com/microsoft/TypeScript/blob/master/src/compiler/parser.ts#L73)). It houses an entire superset of JavaScript which all requires the parser to understand.
+TypeScript's parser is a whopping 8,600 lines of code (find where it begins traversing the tree [here](https://github.com/microsoft/TypeScript/blob/v3.9.2/src/compiler/parser.ts#L73)). It houses an entire superset of JavaScript which all requires the parser to understand.
 
 ### 2) Transform nodes on AST 
 
@@ -158,10 +158,10 @@ As well as the above steps, Type system compilers will usually include an additi
 On a side-note TypeScript actually has a total of 5 phases in its compiler, they are:
 
 1. Language server pre-processor
-2. [Parser](https://github.com/microsoft/TypeScript/blob/master/src/compiler/parser.ts)
-3. [Binder](https://github.com/microsoft/TypeScript/blob/master/src/compiler/binder.ts)
-4. [Checker](https://github.com/microsoft/TypeScript/blob/master/src/compiler/checker.ts)
-5. [Emitter](https://github.com/microsoft/TypeScript/blob/master/src/compiler/emitter.ts)
+2. [Parser](https://github.com/microsoft/TypeScript/blob/v3.9.2/src/compiler/parser.ts)
+3. [Binder](https://github.com/microsoft/TypeScript/blob/v3.9.2/src/compiler/binder.ts)
+4. [Checker](https://github.com/microsoft/TypeScript/blob/v3.9.2/src/compiler/checker.ts)
+5. [Emitter](https://github.com/microsoft/TypeScript/blob/v3.9.2/src/compiler/emitter.ts)
 
 As you can see above the language server contains a **pre-processor** which triggers the type compiler to only run over the file/s which has changed. This will follow any _"import"_ statements to determine what else could have changed and would need to be included in the next re-run. Additionally the compiler has the ability to only re-process the branch of the AST graph which has changed. More on "lazy compilation" below.
 
@@ -173,7 +173,7 @@ Inferring is required for code which does not have an annotation. On that subjec
 
 Using a pre-defined algorithm the engine will calculate what the type for a given variable/function is.
 
-TypeScript uses the algorithm _"best common type"_ inside of its **Binding** phase (the 1st of 2 semantic passes). It considers each candidate type and picks the type that is compatible with all the other candidates. Contextual typing comes into play here i.e. using the location in the inference. There is more help on this in the TypeScript spec [here](https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md). TypeScript actually introduces the idea of **"Symbols"** (interface [here](https://github.com/microsoft/TypeScript/blob/master/src/compiler/types.ts#L4103)) these are named declarations which connect declaration nodes in the AST to other declarations contributing to the same entity. They are the basic building block of the TypeScript Semantic system
+TypeScript uses the algorithm _"best common type"_ inside of its **Binding** phase (the 1st of 2 semantic passes). It considers each candidate type and picks the type that is compatible with all the other candidates. Contextual typing comes into play here i.e. using the location in the inference. There is more help on this in the TypeScript spec [here](https://github.com/microsoft/TypeScript/blob/v3.9.2/doc/spec.md). TypeScript actually introduces the idea of **"Symbols"** (interface [here](https://github.com/microsoft/TypeScript/blob/v3.9.2/src/compiler/types.ts#L4103)) these are named declarations which connect declaration nodes in the AST to other declarations contributing to the same entity. They are the basic building block of the TypeScript Semantic system
 
 ### 2. Checking
 
